@@ -1,0 +1,41 @@
+<div class="main-contener">
+  <div class="chat-content">
+    <div class="chat-content-sub">
+      <div class="title">
+        Get you answer
+      </div>
+      <div class="chat-window">
+        <div class="message-content">
+          <div class="message-content-window-content" *ngFor="let item of chatHistory">
+              <div class="ai-message" *ngIf="item.sender === 'ai'; else userMessage">
+                <div class="message">
+                  <div *ngFor="let object of item.message">
+                    {{object  + "\n"}}
+                  </div>
+                </div>
+              </div>
+
+              <ng-template #userMessage>
+                <div class="user-message">
+                  <div class="message">
+                    {{ item.message[0] }}
+                  </div>
+                </div>
+              </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-left-nav-bar></app-left-nav-bar>
+  <div class="chat-send-message-content">
+    <div class="chat-send-message-inner-content">
+      <input placeholder="Wpisz tutaj text dla chatu" [(ngModel)]="userQuery"/>
+      <button class="btn" (click)="startRecognition()"> start listening</button>
+      <button class="btn" (click)="stopRecognition()"> stop listening</button>
+      <button class="btn" (click)="sendQuery()" [disabled]="disabledButton">
+        Wyślij
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+.left-nav-bar{
+  position: absolute;
+  left: 0.2%;
+  top:1rem;
+  width: 14%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap:8%;
+}
+.left-nav-bar textarea{
+  width: 100%;
+  height: 75vh;
+  font-weight: bold;
+}
+.csv-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  gap:2%;
+}
+.toast-container{
+  background: #343438;
+  color: #e0e0e0;
+  border-radius: 6px;
+  position: fixed;
+  right: 0.2%;
+  bottom: 0.2%;
+  padding: 10px;
+}
+.fade-out {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out; /* Adjust duration and easing as needed */
+}
+
+.hidden {
+  transition: opacity 0.5s ease-in-out; /* Adjust duration and easing as needed */
+  opacity: 0;
+}

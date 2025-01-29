@@ -1,0 +1,45 @@
+<!--<div>
+
+  <div *ngFor="let post of posts">
+    <div>{{ post.body }}</div>
+    <br>
+  </div>
+  <button (click)="getAllPosts()">
+    Click me to get posts
+  </button>
+  <div>
+    <div>
+      {{data?.message}}
+      {{data?.items}}
+    </div>
+  </div>
+  <button (click)="getAllData()">
+    Click me to get data
+  </button>
+
+  <div>
+    <div>
+      products
+      {{products}}
+    </div>
+    <div>
+      <button  (click)="getAllProducts()"> show me products</button>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      products
+      {{products}}
+    </div>
+    <div>
+      <input placeholder="ask chat" [(ngModel)]="messageToSend" type="text"/>
+    </div>
+    <div>
+      <button  (click)="askChat()">ask chat</button>
+    </div>
+  </div>
+</div>-->
+<div>
+  <app-chat></app-chat>
+</div>

@@ -1,0 +1,12 @@
+<div class="left-nav-bar">
+  <textarea placeholder="template" [(ngModel)]="template"></textarea>
+  <div class="csv-container">
+    <input type="file" (change)="onFileSelected($event)" />
+    <button class="btn btn-primary" (click)="submit()">Generuj baze danych</button>
+  </div>
+
+    <div class="toast-container" [ngClass]="{'fade-out': showToastMessage, 'hidden': !showToastMessage}">
+      {{ toastMessage }}
+    </div>
+
+</div>
